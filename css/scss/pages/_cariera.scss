@@ -1,0 +1,68 @@
+#cariera {
+    .team-member {
+        width: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+    }
+    .text {
+        text-align: center;
+        blockquote {
+            font-family: 'Roboto', 'Oswald', sans-serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 0.9rem;
+            line-height: 0.9rem;
+            color: $gray-tint;
+            margin-top: -0.3rem;
+            margin-bottom: 0.8rem;
+        }
+        .name {
+            font-family: 'HelveticaNeueLtProBdCn', 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: $primary-color;
+        }
+        .title {
+            font-family: 'HelveticaNeueLtProCn', 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            color: $primary-color;
+            text-transform: uppercase;
+        }
+    }
+    
+    .icon-area{
+        margin-top:3rem;
+    }
+    p {
+        font-family: 'HelveticaNeueLtProCn', 'Oswald', sans-serif;
+        font-size: 0.8rem;
+        color: $gray-tint;
+        margin: 0;
+    }
+    h1 {
+        font-family: 'Arvo', serif;
+        color: $primary-color;
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    h3 {
+        font-family: 'Arvo', serif;
+        color: $primary-color;
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+        margin: 0;
+    }
+    h4 {
+        font-family: 'HelveticaNeueLtProMdCn', 'Oswald', sans-serif;
+        font-size: 1.2rem;
+        color: $gray-tint;
+        margin: 0;
+        margin-top: 1rem;
+    }
+}
