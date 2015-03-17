@@ -3363,7 +3363,7 @@ blockquote p {
     display: table-cell !important;
   }
 }
-/* line 4, scss/partials/_navbar.scss */
+/* line 3, scss/partials/_navbar.scss */
 header {
   height: 82px;
   border-bottom: 4px solid #319738;
@@ -3380,54 +3380,80 @@ header {
   background-color: #ffffff;
 }
 
-/* line 18, scss/partials/_navbar.scss */
-.mainmenu {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-/* line 22, scss/partials/_navbar.scss */
-.mainmenu ul {
-  list-style: none;
-  line-height: 82px;
-  width: 100%;
-  height: 82px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-/* line 31, scss/partials/_navbar.scss */
-.mainmenu li {
-  font-family: 'HelveticaNeueLtProMdCn', 'Oswald', sans-serif;
-  color: #6f6f6f;
-  font-size: 0.9rem;
-  font-weight: 500;
-  float: left;
-  text-transform: uppercase;
-  font-stretch: condensed;
-  padding: 1.2rem 1rem 0 1rem;
-  cursor: pointer;
-  -webkit-transition: border 0.38s ease-out;
-  transition: border 0.38s ease-out;
-}
-/* line 44, scss/partials/_navbar.scss */
-.mainmenu li:hover {
-  color: #319738;
-  background-color: rgba(0, 0, 0, 0.01);
-  border-top: 5px solid #319738;
-}
-/* line 49, scss/partials/_navbar.scss */
-.mainmenu .active-link {
-  color: #e6332a;
-  background-color: rgba(0, 0, 0, 0.01);
-  border-top: 5px solid #e6332a;
-}
+@media only screen {
+  /* line 19, scss/partials/_navbar.scss */
+  .mainmenu {
+    display: none;
+    text-align: center;
+  }
 
-/* line 56, scss/partials/_navbar.scss */
+  /* line 24, scss/partials/_navbar.scss */
+  .mainlogo {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 30, scss/partials/_navbar.scss */
+  .mainmenu {
+    display: none;
+    text-align: center;
+  }
+
+  /* line 35, scss/partials/_navbar.scss */
+  .mainlogo {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 41, scss/partials/_navbar.scss */
+  .mainmenu {
+    display: block;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+  }
+  /* line 47, scss/partials/_navbar.scss */
+  .mainmenu ul {
+    list-style: none;
+    line-height: 82px;
+    width: 100%;
+    height: 82px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  /* line 56, scss/partials/_navbar.scss */
+  .mainmenu li {
+    font-family: 'HelveticaNeueLtProMdCn', 'Oswald', sans-serif;
+    color: #6f6f6f;
+    font-size: 0.9rem;
+    font-weight: 500;
+    float: left;
+    text-transform: uppercase;
+    font-stretch: condensed;
+    padding: 1.2rem 1rem 0 1rem;
+    cursor: pointer;
+    -webkit-transition: border 0.38s ease-out;
+    transition: border 0.38s ease-out;
+  }
+  /* line 69, scss/partials/_navbar.scss */
+  .mainmenu li:hover {
+    color: #319738;
+    background-color: rgba(0, 0, 0, 0.01);
+    border-top: 5px solid #319738;
+  }
+  /* line 74, scss/partials/_navbar.scss */
+  .mainmenu .active-link {
+    color: #e6332a;
+    background-color: rgba(0, 0, 0, 0.01);
+    border-top: 5px solid #e6332a;
+  }
+}
+/*
 .logo-container {
-  float: right;
-}
-
+    float: right;
+}*/
 /* line 2, scss/partials/_hero.scss */
 #hero-slider img {
   width: 100%;
@@ -3738,18 +3764,22 @@ header {
   color: #6f6f6f;
 }
 
-/* line 2, scss/pages/_beneficii.scss */
+/* line 1, scss/pages/_beneficii.scss */
+#beneficii {
+  text-align: center;
+}
+/* line 3, scss/pages/_beneficii.scss */
 #beneficii div {
   padding-left: 3rem;
   padding-right: 3rem;
 }
-/* line 6, scss/pages/_beneficii.scss */
+/* line 7, scss/pages/_beneficii.scss */
 #beneficii .text {
   background-color: #ffffff;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-/* line 11, scss/pages/_beneficii.scss */
+/* line 12, scss/pages/_beneficii.scss */
 #beneficii h3 {
   font-family: 'Arvo', serif;
   color: #319738;
@@ -3758,7 +3788,7 @@ header {
   font-style: italic;
   text-align: center;
 }
-/* line 19, scss/pages/_beneficii.scss */
+/* line 20, scss/pages/_beneficii.scss */
 #beneficii p {
   font-family: 'HelveticaNeueLtProCn', 'Oswald', sans-serif;
   font-size: 0.9rem;
