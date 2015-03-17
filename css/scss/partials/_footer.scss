@@ -1,3 +1,28 @@
-#footer{
+#footer {
     background: #433d0b url("../img/footer-tile.jpg") center repeat;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #ffffff;
+    ul {
+        list-style: none;
+        color: #ffffff;
+        font-size: 0.8rem;
+        li {
+            a {
+                color: #ffffff;
+                font-family: 'Open Sans', serif;
+                transition: all 0.38 ease-in-out;
+            }
+            a:hover{
+                padding-left: 0.2rem;
+            }
+        }
+    }
+    .copyright {
+        p {
+            text-align: center;
+            font-size: 0.8rem;
+            color: $gray-tint;
+        }
+    }
 }

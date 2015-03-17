@@ -3415,6 +3415,31 @@ blockquote p {
 /* line 1, scss/partials/_footer.scss */
 #footer {
   background: #433d0b url("../img/footer-tile.jpg") center repeat;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #ffffff;
+}
+/* line 6, scss/partials/_footer.scss */
+#footer ul {
+  list-style: none;
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+/* line 11, scss/partials/_footer.scss */
+#footer ul li a {
+  color: #ffffff;
+  font-family: 'Open Sans', serif;
+  transition: all 0.38 ease-in-out;
+}
+/* line 16, scss/partials/_footer.scss */
+#footer ul li a:hover {
+  padding-left: 0.2rem;
+}
+/* line 22, scss/partials/_footer.scss */
+#footer .copyright p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6f6f6f;
 }
 
 /* line 2, scss/pages/_all.scss */
