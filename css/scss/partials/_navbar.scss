@@ -1,5 +1,14 @@
 $nav-height: 82px;
 $nav-line-height: $nav-height;
+
+header{
+    height: $nav-height;
+    border-bottom: 4px solid $primary-color;
+    background-color: #ffffff;
+    position:fixed;
+    top:0;
+    z-index:99999999;
+}
 .navbar {
     height: $nav-height;
     border-bottom: 4px solid $primary-color;
@@ -36,6 +45,11 @@ $nav-line-height: $nav-height;
         color: $primary-color;
         background-color: rgba(0, 0, 0, 0.01);
         border-top: 5px solid $primary-color;
+    }
+    .active-link {
+        color: $secondary-color;
+        background-color: rgba(0, 0, 0, 0.01);
+        border-top: 5px solid $secondary-color;
     }
 }
 

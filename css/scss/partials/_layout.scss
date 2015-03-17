@@ -199,3 +199,13 @@ select {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+.hide{
+    display: none;
+}
+
+.invisible{
+    z-index: -1;
+    visibility: hidden;
+    opacity:0;
+}

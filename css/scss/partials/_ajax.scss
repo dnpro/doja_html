@@ -1,6 +1,11 @@
 #ajax-container{
     width:100%;
-    height:20rem;
+    height: 7rem;
     background-color: #ffffff;
     padding:3rem;
+    transition: height .38s ease-in-out;
+}
+
+[data-type="page"]{
+    transition: opacity 0.3s linear;
 }

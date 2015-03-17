@@ -3,6 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Muli:300);
 @font-face {
   font-family: 'HelveticaNeueLtProThCn';
   src: url("../fonts/helveticaneueltpro-thcn.eot");
@@ -722,6 +723,18 @@ select {
   background-color: #ededed;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+/* line 203, scss/partials/_layout.scss */
+.hide {
+  display: none;
+}
+
+/* line 207, scss/partials/_layout.scss */
+.invisible {
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
 }
 
 /* line 1, scss/partials/_grid.scss */
@@ -3350,20 +3363,30 @@ blockquote p {
     display: table-cell !important;
   }
 }
-/* line 3, scss/partials/_navbar.scss */
+/* line 4, scss/partials/_navbar.scss */
+header {
+  height: 82px;
+  border-bottom: 4px solid #319738;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 99999999;
+}
+
+/* line 12, scss/partials/_navbar.scss */
 .navbar {
   height: 82px;
   border-bottom: 4px solid #319738;
   background-color: #ffffff;
 }
 
-/* line 9, scss/partials/_navbar.scss */
+/* line 18, scss/partials/_navbar.scss */
 .mainmenu {
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-/* line 13, scss/partials/_navbar.scss */
+/* line 22, scss/partials/_navbar.scss */
 .mainmenu ul {
   list-style: none;
   line-height: 82px;
@@ -3373,7 +3396,7 @@ blockquote p {
   padding: 0;
   overflow: hidden;
 }
-/* line 22, scss/partials/_navbar.scss */
+/* line 31, scss/partials/_navbar.scss */
 .mainmenu li {
   font-family: 'HelveticaNeueLtProMdCn', 'Oswald', sans-serif;
   color: #6f6f6f;
@@ -3387,14 +3410,20 @@ blockquote p {
   -webkit-transition: border 0.38s ease-out;
   transition: border 0.38s ease-out;
 }
-/* line 35, scss/partials/_navbar.scss */
+/* line 44, scss/partials/_navbar.scss */
 .mainmenu li:hover {
   color: #319738;
   background-color: rgba(0, 0, 0, 0.01);
   border-top: 5px solid #319738;
 }
+/* line 49, scss/partials/_navbar.scss */
+.mainmenu .active-link {
+  color: #e6332a;
+  background-color: rgba(0, 0, 0, 0.01);
+  border-top: 5px solid #e6332a;
+}
 
-/* line 42, scss/partials/_navbar.scss */
+/* line 56, scss/partials/_navbar.scss */
 .logo-container {
   float: right;
 }
@@ -3407,9 +3436,15 @@ blockquote p {
 /* line 1, scss/partials/_ajax.scss */
 #ajax-container {
   width: 100%;
-  height: 20rem;
+  height: 7rem;
   background-color: #ffffff;
   padding: 3rem;
+  transition: height .38s ease-in-out;
+}
+
+/* line 9, scss/partials/_ajax.scss */
+[data-type="page"] {
+  transition: opacity 0.3s linear;
 }
 
 /* line 1, scss/partials/_footer.scss */
@@ -3419,29 +3454,213 @@ blockquote p {
   padding-bottom: 2rem;
   color: #ffffff;
 }
-/* line 6, scss/partials/_footer.scss */
+/* line 7, scss/partials/_footer.scss */
+#footer h1 {
+  font-family: 'Arvo', serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+/* line 16, scss/partials/_footer.scss */
 #footer ul {
   list-style: none;
   color: #ffffff;
   font-size: 0.8rem;
+  margin-top: 2rem;
 }
-/* line 11, scss/partials/_footer.scss */
+/* line 21, scss/partials/_footer.scss */
+#footer ul li {
+  margin-bottom: 0.5rem;
+}
+/* line 23, scss/partials/_footer.scss */
 #footer ul li a {
   color: #ffffff;
   font-family: 'Open Sans', serif;
   transition: all 0.38 ease-in-out;
 }
-/* line 16, scss/partials/_footer.scss */
+/* line 28, scss/partials/_footer.scss */
 #footer ul li a:hover {
   padding-left: 0.2rem;
 }
-/* line 22, scss/partials/_footer.scss */
+/* line 34, scss/partials/_footer.scss */
 #footer .copyright p {
+  margin: 0;
+  margin-top: 2rem;
   text-align: center;
   font-size: 0.8rem;
   color: #6f6f6f;
 }
 
+/* line 1, scss/partials/_contact.scss */
+#contact {
+  /* Centres the form within the page */
+  /* Styles the text boxes */
+  /* Styles the text area boxes (message field) */
+  /* Styles the submit button */
+}
+/* line 4, scss/partials/_contact.scss */
+#contact form {
+  margin: 0 auto;
+  width: 100%;
+}
+/* line 10, scss/partials/_contact.scss */
+#contact input,
+#contact textarea,
+#contact file {
+  width: 100%;
+  height: 3rem;
+  background-color: #efefef;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 0.9em;
+  color: #6f6f6f;
+  margin-top: 0.5rem;
+}
+/* line 22, scss/partials/_contact.scss */
+#contact input:focus,
+#contact textarea:focus {
+  border: 1px solid #319738;
+}
+/* line 28, scss/partials/_contact.scss */
+#contact textarea {
+  height: 10rem;
+  background-color: #efefef;
+}
+/* line 34, scss/partials/_contact.scss */
+#contact .buttons {
+  margin: 0;
+  margin-top: 0.5rem;
+}
+/* line 37, scss/partials/_contact.scss */
+#contact .buttons button {
+  background-color: #efefef;
+  border: 0;
+  border-radius: 3px;
+  height: 3rem;
+  font-family: 'HelveticaNeueLtProCn', 'Oswald', sans-serif;
+  font-size: 1rem;
+  color: #6f6f6f;
+  transition: all .2s ease-in-out;
+}
+/* line 47, scss/partials/_contact.scss */
+#contact .buttons #submit:hover {
+  background-color: #319738;
+  color: #ffffff;
+}
+
+/* line 1, scss/partials/_loader.scss */
+.loader {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 70px;
+  text-align: center;
+}
+
+/* line 11, scss/partials/_loader.scss */
+.loader > div {
+  width: 18px;
+  height: 18px;
+  background-color: #319738;
+  opacity: 0.5;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 26, scss/partials/_loader.scss */
+.loader .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+/* line 31, scss/partials/_loader.scss */
+.loader .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/* line 1, scss/partials/_spinner.scss */
+.spinner {
+  position: absolute;
+  margin: auto;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* line 10, scss/partials/_spinner.scss */
+.spinner > div {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #319738;
+  opacity: 0.5;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 25, scss/partials/_spinner.scss */
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+/* line 30, scss/partials/_spinner.scss */
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
 /* line 2, scss/pages/_all.scss */
 #ajax-container .paragraph {
   height: 100%;
@@ -3457,15 +3676,12 @@ blockquote p {
 /* line 11, scss/pages/_all.scss */
 #ajax-container .text {
   margin-top: 1rem;
-  height: 10rem;
-  overflow: auto;
-  display: block;
 }
-/* line 17, scss/pages/_all.scss */
+/* line 14, scss/pages/_all.scss */
 #ajax-container .buttons {
   margin-top: 1rem;
 }
-/* line 19, scss/pages/_all.scss */
+/* line 16, scss/pages/_all.scss */
 #ajax-container .buttons button {
   background-color: #ffffff;
   border: 0;
@@ -3478,32 +3694,32 @@ blockquote p {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
-/* line 31, scss/pages/_all.scss */
+/* line 28, scss/pages/_all.scss */
 #ajax-container .buttons .prev {
   border: 1px solid #e6332a;
 }
-/* line 34, scss/pages/_all.scss */
+/* line 31, scss/pages/_all.scss */
 #ajax-container .buttons .prev:hover {
   background-color: #e6332a;
   color: #ffffff;
 }
-/* line 38, scss/pages/_all.scss */
+/* line 35, scss/pages/_all.scss */
 #ajax-container .buttons .next {
   border: 1px solid #319738;
 }
-/* line 41, scss/pages/_all.scss */
+/* line 38, scss/pages/_all.scss */
 #ajax-container .buttons .next:hover {
   background-color: #319738;
   color: #ffffff;
 }
-/* line 46, scss/pages/_all.scss */
+/* line 43, scss/pages/_all.scss */
 #ajax-container h4 {
   font-family: 'HelveticaNeueLtProMdCn', 'Oswald', sans-serif;
   font-size: 1.2rem;
   line-height: 1.3rem;
   color: #6f6f6f;
 }
-/* line 52, scss/pages/_all.scss */
+/* line 49, scss/pages/_all.scss */
 #ajax-container h6 {
   font-family: 'Roboto', 'Oswald', sans-serif;
   font-weight: 300;
@@ -3514,7 +3730,7 @@ blockquote p {
   margin-top: -0.3rem;
   text-transform: lowercase;
 }
-/* line 62, scss/pages/_all.scss */
+/* line 59, scss/pages/_all.scss */
 #ajax-container p {
   font-family: 'HelveticaNeueLtProCn', 'Oswald', sans-serif;
   font-size: 1rem;
