@@ -1,44 +1,86 @@
 $nav-height: 82px;
 $nav-line-height: $nav-height;
+header {
+    height: $nav-height;
+    border-bottom: 4px solid $primary-color;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 99999999;
+}
+
 .navbar {
     height: $nav-height;
     border-bottom: 4px solid $primary-color;
     background-color: #ffffff;
 }
 
-.mainmenu {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    ul {
-        list-style: none;
-        line-height: $nav-line-height;
-        width: 100%;
-        height: $nav-height;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+@media only screen {
+    .mainmenu {
+        display: none;
+        text-align: center;
     }
-    li {
-        font-family: 'HelveticaNeueLtProMdCn', 'Oswald', sans-serif;
-        color: $gray-tint;
-        font-size: 0.9rem;
-        font-weight: 500;
-        float: left;
-        text-transform: uppercase;
-        font-stretch: condensed;
-        padding: 1.2rem 1rem 0 1rem;
-        cursor: pointer;
-        -webkit-transition: border 0.38s ease-out;
-        transition: border 0.38s ease-out;
-    }
-    li:hover {
-        color: $primary-color;
-        background-color: rgba(0, 0, 0, 0.01);
-        border-top: 5px solid $primary-color;
+    
+    .mainlogo{
+        text-align: center;
     }
 }
 
+@media only screen and (min-width: 64.063em) {
+    .mainmenu {
+        display: none;
+        text-align: center;
+    }
+    
+    .mainlogo{
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 64.063em){
+    .mainmenu {
+        display: block;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        text-align: right;
+        ul {
+            list-style: none;
+            line-height: $nav-line-height;
+            width: 100%;
+            height: $nav-height;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        li {
+            font-family: 'HelveticaNeueLtProMdCn', 'Oswald', sans-serif;
+            color: $gray-tint;
+            font-size: 0.9rem;
+            font-weight: 500;
+            float: left;
+            text-transform: uppercase;
+            font-stretch: condensed;
+            padding: 1.2rem 1rem 0 1rem;
+            cursor: pointer;
+            -webkit-transition: border 0.38s ease-out;
+            transition: border 0.38s ease-out;
+        }
+        li:hover {
+            color: $primary-color;
+            background-color: rgba(0, 0, 0, 0.01);
+            border-top: 5px solid $primary-color;
+        }
+        .active-link {
+            color: $secondary-color;
+            background-color: rgba(0, 0, 0, 0.01);
+            border-top: 5px solid $secondary-color;
+        }
+    }
+}
+
+
+/*
 .logo-container {
     float: right;
-}
+}*/

@@ -1,3 +1,42 @@
-#footer{
+#footer {
     background: #433d0b url("../img/footer-tile.jpg") center repeat;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #ffffff;
+    
+    h1 {
+        font-family: 'Arvo', serif;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-style: italic;
+        margin: 0;
+    }
+    
+    ul {
+        list-style: none;
+        color: #ffffff;
+        font-size: 0.8rem;
+        margin-top:2rem;
+        li {
+            margin-bottom:0.5rem;
+            a {
+                color: #ffffff;
+                font-family: 'Open Sans', serif;
+                transition: all 0.38 ease-in-out;
+            }
+            a:hover{
+                padding-left: 0.2rem;
+            }
+        }
+    }
+    .copyright {
+        p {
+            margin:0;
+            margin-top:2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: $gray-tint;
+        }
+    }
 }
