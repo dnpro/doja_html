@@ -100,6 +100,7 @@ select {
     margin: 0 auto;
     max-width: 1280px;
     width: 90%;
+    overflow: hidden;
 }
 
 .container.full {
@@ -200,12 +201,12 @@ select {
     margin-bottom: 1rem;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-.invisible{
+.invisible {
     z-index: -1;
     visibility: hidden;
-    opacity:0;
+    opacity: 0;
 }

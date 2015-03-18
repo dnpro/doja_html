@@ -17,18 +17,68 @@
             vpHeight = $window.height();
 
         // Initial setup
+        $window.on("click", function (e) {
+            e.preventDefault();
+        });
         $loader.fadeIn("slow");
         $loader.css({
             top: vpHeight / 2
         });
 
+
+
+        var gridContainer = $('#grid-container'),
+            wrap, filtersCallback;
+
+
+        /*********************************
+            init cubeportfolio
+         *********************************/
+        gridContainer.cubeportfolio({
+            defaultFilter: '*',
+            animationType: 'fadeOutTop',
+            gapHorizontal: 0,
+            gapVertical: 0,
+            gridAdjustment: 'responsive',
+            caption: 'zoom',
+            mediaQueries: [{
+                width: 1600,
+                cols: 5
+        }, {
+                width: 1200,
+                cols: 4
+        }, {
+                width: 800,
+                cols: 3
+        }, {
+                width: 500,
+                cols: 2
+        }, {
+                width: 320,
+                cols: 1
+        }],
+            caption: 'zoom',
+            displayType: 'lazyLoading',
+            displayTypeSpeed: 100,
+
+            // lightbox
+            lightboxDelegate: '.cbp-lightbox',
+            lightboxGallery: true,
+            lightboxTitleSrc: 'data-title',
+            lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
+        });
+
+
+
+
         $window.on("load", function () {
             setTimeout(hideLoader, 1000);
         });
-        
-        $window.on("resize", function(){
+
+        $window.on("load resize", function () {
+            var ajaxchildrenHeight = $ajaxcontainer.find("[data-type='page']").outerHeight();
             $ajaxcontainer.css({
-               height: $ajaxcontainer.children().outerHeight() + ajaxcontainerHeight
+                height: ajaxchildrenHeight
             });
         });
 
@@ -40,10 +90,12 @@
 
     function hideLoader() {
         $loader.fadeOut("1000");
+        $window.resize();
         setTimeout(function () {
             $frontpage.fadeIn("fast");
             $loader.remove();
-            $(".mainmenu [data-link='despre.html']").click();
+            $window.resize();
+            //$(".mainmenu [data-link='despre.html']").click();
         }, 1200);
     }
 

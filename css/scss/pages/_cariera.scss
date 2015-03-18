@@ -29,10 +29,6 @@
             text-transform: uppercase;
         }
     }
-    
-    .icon-area{
-        margin-top:3rem;
-    }
     p {
         font-family: 'HelveticaNeueLtProCn', 'Oswald', sans-serif;
         font-size: 0.8rem;
@@ -65,4 +61,11 @@
         margin: 0;
         margin-top: 1rem;
     }
+    @media only screen {
+        .icon-area {
+            padding: 1rem;
+        }
+    }
+    @media only screen and (min-width: 40.063em) {}
+    @media only screen and (min-width: 64.063em) {}
 }

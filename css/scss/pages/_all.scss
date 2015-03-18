@@ -5,14 +5,14 @@
     .image {
         height: 100%;
     }
-    .title{
+    .title {
         height: 2rem;
     }
     .text {
-        margin-top:1rem;
+        margin-top: 1rem;
     }
     .buttons {
-        margin-top:1rem;
+        margin-top: 1rem;
         button {
             background-color: #ffffff;
             border: 0;
@@ -30,14 +30,14 @@
         }
         .prev:hover {
             background-color: $secondary-color;
-            color:#ffffff;
+            color: #ffffff;
         }
         .next {
             border: 1px solid $primary-color;
         }
         .next:hover {
             background-color: $primary-color;
-            color:#ffffff;
+            color: #ffffff;
         }
     }
     h4 {
@@ -62,7 +62,15 @@
         line-height: 1.2rem;
         color: $gray-tint;
     }
+    @media only screen {
+        .image{
+            text-align: center;
+        }
+    }
+    @media only screen and (min-width: 40.063em) {}
+    @media only screen and (min-width: 64.063em) {}
 }
 
 @import "beneficii";
 @import "cariera";
+@import "galerie";
