@@ -1,0 +1,36 @@
+$nav-height: 82px;
+$nav-line-height: $nav-height;
+#gheader {
+    height: $nav-height;
+    border-bottom: 4px solid $primary-color;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+}
+
+.gnavbar {
+    height: $nav-height;
+    border-bottom: 4px solid $primary-color;
+    background-color: #ffffff;
+}
+
+#grid-container {
+    img {
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        transition: filter 2s ease-out;
+        -webkit-transition: -webkit-filter 2s ease-out;
+    }
+    img:hover {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+        transition: filter 0.2s ease-out;
+        -webkit-transition: -webkit-filter 0.2s ease-out;
+    }
+}
+
+#galerie{
+    .container{
+        padding-top: 80px;
+    }
+}

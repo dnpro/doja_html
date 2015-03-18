@@ -27,34 +27,37 @@
 
     <div id="frontpage" class="hide container full">
         <header id="header" class="row full">
-            <div class="navbar large-12 columns large-centered white">
-                <div class="large-10 large-centered columns">
-                    <div class="mainlogo small-12 medium-12 large-5 columns">
-                        <div class="logo-container">
-                            <img src="img/logo_full.svg" />
-                        </div>
+            <div class="navbar small-12 medium-12 large-10 columns small-centered white">
+                <div class="mainlogo small-12 medium-5 large-5 columns">
+                    <div class="logo-container">
+                        <img src="img/logo_full.svg" />
                     </div>
-                    <nav class="mainmenu large-7 medium-4 columns">
-                        <ul class="right">
-                            <li data-link="plantatie.html" data-effect="ajax"><span>Plantatie</span>
-                            </li>
-                            <li data-link="#beneficii" data-effect="scroll"><span>Beneficii</span>
-                            </li>
-                            <li data-link="despre.html" data-effect="ajax"><span>Despre Asociatie</span>
-                            </li>
-                            <li data-link="depozit.html" data-effect="ajax"><span>Depozit</span>
-                            </li>
-                            <li data-link="galerie.html" data-effect="none"><span>Galerie</span>
-                            </li>
-                            <li data-link="#contact" data-effect="scroll"><span>Contact</span>
-                            </li>
-                        </ul>
-                    </nav>
+                </div>
+                <nav class="mainmenu small-12 medium-7 large-7 columns">
+                    <ul class="right">
+                        <li data-link="plantatie.html" data-effect="ajax"><span>Plantatie</span>
+                        </li>
+                        <li data-link="#beneficii" data-effect="scroll"><span>Beneficii</span>
+                        </li>
+                        <li data-link="despre.html" data-effect="ajax" class="active-link loaded"><span>Despre Asociatie</span>
+                        </li>
+                        <li data-link="depozit.html" data-effect="ajax"><span>Depozit</span>
+                        </li>
+                        <li data-link="galerie.php" data-effect="none"><span>Galerie</span>
+                        </li>
+                        <li data-link="#contact" data-effect="scroll"><span>Contact</span>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="small-menu small-2 columns">
+                    <div class="menutoggle" style="display:block;">
+                        <img src="img/menu.svg">
+                    </div>
                 </div>
             </div>
         </header>
 
-        <div class="container full">
+        <div class="row white full">
             <section id="hero-slider">
                 <image class="hero" src="img/hero.jpg" />
             </section>
@@ -62,16 +65,42 @@
 
         <div class="row white">
             <div class="large-2 large-centered columns">
-                 <div class="spinner hide">
+                <div class="spinner hide">
                     <div class="bounce1"></div>
                     <div class="bounce2"></div>
                     <div class="bounce3"></div>
                 </div>
             </div>
         </div>
-        
+
         <div class="row white">
             <section id="ajax-container">
+                <div id="asociatie" data-type="page">
+                    <div class="row">
+                        <div class="paragraph large-7 columns">
+                            <div class="title row">
+                                <h4>Asociatia Gheorghe Doja</h4>
+                                <h6>Cooperativa Agricola</h6>
+                            </div>
+                            <div class="text row">
+                                <p style="text-indent: 3rem;">Gheorghe Doja Cooperativa Agricola este o cooperativa de gradul 2, infiintata in Aprilie 2013, in baza legii 566/2004 si are ca activitate principala comertul cu ridicate al fructelor si legumelor. Dupa cum reiese si din numele cooperativei, aceasta are sediul social in com. Gheorghe Doja, jud. Ialomita, al doilea bazin de productie din tara, pentru cultura de pepeni verzi si galbeni, dupa Dabuleni.</p>
+                                <p style="text-indent: 3rem;">Aceasta cooperativa a fost infiintata de 5 membrii fondatori, ceea ce reprezinta minimul de membrii fondatori, pe care il prevede legea.</p>
+                                <p style="text-indent: 3rem;">Inca de la inceput scopul infiintarii acesti forme de asociere a fost acela de a putea valorifica productia noastra mai usor si in retele de hypermarket-uri, si deasemenea de a accesa mai usor fondurile europene de care beneficiaza tara noastra in prezent. Astfel in urma depunerii catre Ministerul Agriculturi si Dezvoltarii Rurale in luna Iunie 2013, a unui proiect de recunoastere ca si grup de producatori si un plan de afaceri bine structurat pe 4 ani, la 01/07/2013 am obtinut AVIZUL DE RECUNOASTERE CE CONFERA STATULUL DE GRUP DE PRODUCATORI RECUNOSCUT PRELIMINAR NR.208/01.07.2013 , ceea ce reprezenita conform Ordinului MADR nr.694/2008, modificat si completat, un sprijin financiar in cuntum de 75% din investitiile realizate si prevazute in planul de afaceri prezentat la proiect si un procent de 10% din valoarea productie comercializate de catre membrii cooperativei. Prin acest proiect in care suntem angrenati in prezent, noi trebuie sa realizam investitii totale in valoare aproximativa de. 1.200.000 lei.</p>
+                                <p style="text-indent: 3rem;">In anul 2013, cooperativa a obtinut o cifra de afaceri in suma de 874.080,00 lei, si o productie comercializata de aproximativ. 1.200 to, obtinuta de catre membrii si intr-un procent mai mic si a altor producatori. </p>
+                                <p style="text-indent: 3rem;">In anul 2014 cooperativa a obtinut o cifra de afaceri in valoare de app. 2.100.000 lei,si o productie comercializata de aproximativ 2.400 to. Pentru anul 2015, conform planului de afaceri si a suprafetelor ce vor fi cultivate de membrii cooperatori, estimam o productie de cca. 10.000 to pepene verde si galben. Tot in acest an in portofoliul nostru se vor regasii si urmatoarele legume produse: ceapa verde, dovlecel, rosii, ardei kapia, ardei gogosar, mazare, varza de toamna, dovleac placintar si dovleac tip Halloween.</p>
+                                <p style="text-indent: 3rem;">In anul 2015 vom finalize constructia depozitului pentru sortare, ambalare si depozitare a legumelor si fructelor, constructie care este esentiala in valorificarea cat mai eficienta a produselor noastre. Ca urmare a finalizarii constructiei, activitatea noastra se va diversifica, nu numai prin achizitie de produse legume fructe de la membrii si alti producatori, cat si prin vanzarea catre acestia de imputuri necesare in activitatea de productie, astfel vom dezvolta o intreaga activitate de comert in zona. Speram ca pe viitor sa ne extindem activitatea si in procesarea de legume fructe cat si exportul lor.
+                                </p>
+                            </div>
+                            <div class="buttons row">
+                                <button class="medium-4 large-3 columns prev" link-rel="plantatie.html">Plantatie</button>
+                                <button class="medium-4 large-3 columns left next" link-rel="depozit.html">Depozit</button>
+                            </div>
+                        </div>
+                        <div class="image large-5 columns">
+                            <img src="img/watermelon-slice.jpg">
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
 
@@ -109,9 +138,11 @@
 
         <div id="cariera" class="row white">
             <div class="row">
-                <h1>Vrei sa devii membru al asociatiei noastre?</h1>
+                <div class="small-11 small-centered columns">
+                    <h1>Vrei sa devii membru al asociatiei noastre?</h1>
+                </div>
             </div>
-            <div class="large-4 columns">
+            <div class="large-4 columns" style="margin-top:1rem;">
                 <div class="team-member">
                     <img src="img/ceo-01.jpg">
                 </div>
@@ -121,26 +152,26 @@
                     </p>
                 </div>
             </div>
-            <div class="large-8 columns">
+            <div class="large-8 columns" style="margin-top:1rem;">
                 <div class="row">
                     <h3>Vei avea urmatoarele beneficii</h3>
                 </div>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="small-11 medium-6 large-6 small-centered medium-uncentered large-uncentered columns">
                         <div class="row">
-                            <div class="icon-area large-2 columns"><img src="img/graph.svg">
+                            <div class="icon-area small-3 medium-3 large-2 columns"><img src="img/graph.svg">
                             </div>
-                            <div class="text-area large-10 columns">
+                            <div class="text-area small-9 medium-9 large-10 columns">
                                 <h4>High Quality</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur porttitor quam sit amet pulvinar. </p>
                             </div>
                         </div>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="small-11 medium-6 large-6 small-centered medium-uncentered large-uncentered columns">
                         <div class="row">
-                            <div class="icon-area large-2 columns"><img src="img/graph.svg">
+                            <div class="icon-area small-3 medium-3 large-2 columns"><img src="img/graph.svg">
                             </div>
-                            <div class="text-area large-10 columns">
+                            <div class="text-area small-9 medium-9 large-10 columns">
                                 <h4>High Quality</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur porttitor quam sit amet pulvinar. </p>
                             </div>
@@ -148,21 +179,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="large-6 columns">
+                    <div class="small-11 medium-6 large-6 small-centered medium-uncentered large-uncentered columns">
                         <div class="row">
-                            <div class="icon-area large-2 columns"><img src="img/smiley.svg">
+                            <div class="icon-area small-3 medium-3 large-2 columns"><img src="img/smiley.svg">
                             </div>
-                            <div class="text-area large-10 columns">
+                            <div class="text-area small-9 medium-9 large-10 columns">
                                 <h4>High Quality</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur porttitor quam sit amet pulvinar. </p>
                             </div>
                         </div>
                     </div>
-                    <div class="large-6 columns">
+                    <div class="small-11 medium-6 large-6 small-centered medium-uncentered large-uncentered columns">
                         <div class="row">
-                            <div class="icon-area large-2 columns"><img src="img/files.svg">
+                            <div class="icon-area small-3 medium-3 large-2 columns"><img src="img/files.svg">
                             </div>
-                            <div class="text-area large-10 columns">
+                            <div class="text-area small-9 medium-9 large-10 columns">
                                 <h4>High Quality</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consectetur porttitor quam sit amet pulvinar. </p>
                             </div>
@@ -182,17 +213,17 @@
 
                     <h1 class="title">Linkuri utile</h1>
                     <ul>
-                        <li><a href="#">Plantatie</a>
+                        <li><a href="#" link-rel="depozit.html">Plantatie</a>
                         </li>
-                        <li><a href="#">Beneficii</a>
+                        <li><a href="#" link-rel="depozit.html">Beneficii</a>
                         </li>
-                        <li><a href="#">Despre Asociatie</a>
+                        <li><a href="#" link-rel="depozit.html">Despre Asociatie</a>
                         </li>
-                        <li><a href="#">Depozit</a>
+                        <li><a href="#" link-rel="depozit.html">Depozit</a>
                         </li>
-                        <li><a href="#">Galerie</a>
+                        <li><a href="#" link-rel="depozit.html">Galerie</a>
                         </li>
-                        <li><a href="#">Contact</a>
+                        <li><a href="#" link-rel="depozit.html">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -230,10 +261,11 @@
     </script>
 
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/ajax.js"></script>
-    <script src="js/vendor/custom-scrollbar.min.js"></script>
-    <script src="js/vendor/jquery.smooth-scroll.js"></script>
+    <script src="js/vendor/smoothscroll.js"></script>
+    <script src="js/vendor/jquery.cubeportfolio.min.js"></script>
+    <script src="js/main.js"></script>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

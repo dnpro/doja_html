@@ -11,6 +11,7 @@
             $frontpage = $body.find("#frontpage"),
             $ajaxcontainer = $("#ajax-container"),
             $link = $("[data-link]"),
+            $linkRel = $("[link-rel]"),
             $loader = $(".loader"),
             $spinner = $(".spinner"),
             spinnerHeight = $spinner.outerHeight(),
@@ -18,6 +19,14 @@
 
             // Initial setup
             wskAjaxLoad();
+        $window.on("click", $("[link-rel]"), function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log($(e.target));
+            var $this = $(e.target),
+                relation = $this.attr("link-rel");
+            $("[data-link='" + relation + "']").click();
+        });
 
         // Event delegation
 
@@ -34,7 +43,6 @@
                 linkURL = $this.attr("data-link"),
                 dataEffect;
             dataEffect = $this.attr("data-effect");
-            console.log(linkURL);
             if (!$this.hasClass("active-link")) {
 
                 $this.addClass("active-link");
@@ -50,11 +58,10 @@
                         error: errorFn,
                         complete: completeFn
                     });
-                } else if(dataEffect === "scroll"){
-                    var scrollOffset = ($(linkURL).offset().top-100);
-                    console.log(scrollOffset);
+                } else if (dataEffect === "scroll") {
+                    var scrollOffset = ($(linkURL).offset().top - 100);
                     $window.scrollTop(scrollOffset);
-                }else if(dataEffect === "none"){
+                } else if (dataEffect === "none") {
                     window.location = linkURL;
                 }
             }
@@ -75,7 +82,7 @@
             prevContent.remove();
             var $content = $(result).find('[data-type="page"]');
             $ajaxcontainer.append($content);
-            var contentHeight = $content.outerHeight() + $ajaxcontainer.outerHeight();
+            var contentHeight = $content.outerHeight() + 112;
             console.log(contentHeight);
             $ajaxcontainer.css("height", contentHeight);
             setTimeout(function () {
